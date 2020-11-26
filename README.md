@@ -1,3 +1,5 @@
+###Run the Backend node js api before running this SPA 
+
 # AngularCrudOperations
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
@@ -38,5 +40,6 @@ Angular CRUD operations
   * Read
   * Update
   * Delete
+### ADD and Enable CORPS Extenstion to Chrome browser.
 
 ![picture](./src/assets/CRUD.gif)
