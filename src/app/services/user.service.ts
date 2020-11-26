@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private url: string = 'http://localhost:5000/api/v1/employees/';
+  private uri: string = 'http://localhost:5000/api/v1/employees/';
+  private url: string = `${this.uri}`;
   private upersons: User[] = [];
   
 
@@ -19,7 +20,7 @@ export class UserService {
   }
 
   addUser(user: User) {
-    const url = `${this.url}`;
+   
     user.designation = 'fullstackdevloper';
     user.email = 'ramu900k@gmail.com';
     user.is_deleted = 0;
@@ -27,7 +28,7 @@ export class UserService {
     user.phone = '5465465465';
     user.status = 1;
     user.salary= 654654;
-    return this.http.post<string>(url, user);
+    return this.http.post<string>(this.url, user);
     this.upersons.push(user);
 
   }
